@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Cambie el idioma a español -->
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -9,32 +10,45 @@
   <title>Formulario</title>
 </head>
 <body>
-  <h1>Bienvenidos a mi fiesta</h1>
+  <!-- Agregue etiqueta semantica main -->
+  <main><!-- Agregue class al h1 y le agregue signos de admiracion al texto -->
+  <h1 class="mainTitle">Bienvenidos a mi fiesta!!</h1>
   <h2>Por favor, confirmar asistencia:</h2>
 
-  <form class="formulario">
-    Nombre <input type="text" name="name" id="name">
-    <br />
-    Edad <input type="number" name="age" id="age">
-    <br />
+  <!-- Agregue un id de form -->
+  <form id="form" class="formulario">
+    <!-- Removi los br que habia en el codumento html -->
+    <!-- Puse una etiqueta "label" para el campo de nombre-->
+    <label for="name">Nombre:</label>
+    <input type="text" name="name" id="name" class="form-control" required>
+    
 
-    Nacionalidad
-    <select name="nationality" id="nationality">
+    <!-- Etiqueta para el campo de edad, mejora la accesibilidad -->
+    <label for="age">Edad:</label>
+    <input type="number" name="age" id="age" class="form-control" required>
+    
+
+    <!-- Etiqueta para el campo de nacionalidad, mejora la accesibilidad -->
+    <label for="nationality">Nacionalidad:</label>
+    <select name="nationality" id="nationality" class="form-control">
       <option value="ar">Argentina</option>
       <option value="mx">Mexicana</option>
       <option value="per">Peruana</option>
       <option value="vnzl">Venezolana</option>
     </select>
-    <br />
-    <input type="submit">
+    
+    <!-- Agregue un value -->
+    <input type="submit" value="Enviar confirmación">
   </form>
+</main>
 
+<!-- Agregue etiqueta semantica section -->
+<section>
   <div>
     <h2>Lista de invitados</h2>
-
   </div>
-
-  <script src="../formulario.js"></script>
+</section>
+  <script src="/codigo-otros-2/formulario.js"></script>
 </body>
 
 </html>
